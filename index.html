@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0d" />
+  <title>ROASTED — Dum Hai Toh Khol Ke Dikhā</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#">ROASTED<span>💀</span></a>
+    <nav>
+      <a href="#memes">Memes</a>
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#video">Video</a>
+    </nav>
+    <button class="nav-upload" id="navUpload">Upload Photo</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">AI COMEDY LAB • DESI INTERNET ENERGY</div>
+        <h1>DUM HAI TOH<br><span>KHOL KE DIKHA.</span> 💀</h1>
+        <p class="hero-sub">Photo daal. AI ko bolne de ki tera kya banega.</p>
+
+        <div class="hero-actions">
+          <button class="primary" id="heroUpload">📸 Upload Photo</button>
+          <button class="secondary" id="cameraBtn">📷 Camera</button>
+        </div>
+
+        <div class="mini-note">No boring templates. Just chaos.</div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-top">
+          <span>ROAST OF THE DAY</span>
+          <span class="live-dot">● LIVE</span>
+        </div>
+        <div class="hero-meme">
+          <div class="hero-meme-stamp">BRO THINKS<br>HE'S THE MAIN CHARACTER</div>
+          <div class="hero-meme-emoji">🗿</div>
+          <div class="hero-meme-caption">confidence: 100%<br>preparation: 2%</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker">
+      <div>😂 SABKI BEZZATI</div><div>🔥 AI ROASTS</div><div>💀 FRIENDS KO TAG KAR</div>
+      <div>😂 SABKI BEZZATI</div><div>🔥 AI ROASTS</div><div>💀 FRIENDS KO TAG KAR</div>
+    </section>
+
+    <section class="creator section">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">01 / CREATE</span>
+          <h2>Ek photo. <em>AI ka decision.</em></h2>
+        </div>
+        <p>Gallery se photo ya camera se seedha capture. Phir <b>LET AI COOK</b>.</p>
+      </div>
+
+      <div class="creator-grid">
+        <div class="upload-panel">
+          <div class="dropzone" id="dropzone">
+            <div class="upload-icon">＋</div>
+            <h3>PHOTO YAHAAN DAAAL</h3>
+            <p>JPG / PNG / WEBP</p>
+            <div class="upload-buttons">
+              <button class="primary small" id="chooseBtn">Choose Photo</button>
+              <button class="secondary small" id="cameraBtn2">Use Camera</button>
+            </div>
+            <input type="file" id="fileInput" accept="image/*" hidden />
+          </div>
+
+          <div class="preview-wrap hidden" id="previewWrap">
+            <img id="preview" alt="Selected photo preview" />
+            <div class="preview-actions">
+              <button class="primary" id="cookBtn">🔥 LET AI COOK</button>
+              <button class="ghost" id="clearBtn">Remove</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="roast-output" id="roastOutput">
+          <div class="output-empty">
+            <span>💀</span>
+            <h3>ROAST READY?</h3>
+            <p>Photo select kar aur dekh AI kya bakchodi karta hai.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="memes section" id="memes">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">02 / MEME WALL</span>
+          <h2>Front page pe <em>sirf chaos.</em></h2>
+        </div>
+        <button class="ghost" id="shuffleBtn">↻ Shuffle</button>
+      </div>
+
+      <div class="masonry" id="memeWall">
+        <article class="meme-card tilt-a">
+          <span class="meme-tag">DESI CLASSIC</span>
+          <div class="meme-big">“KAL SE PADHUNGA.”</div>
+          <div class="meme-small">— kal bhi yehi bola tha</div>
+          <div class="reaction">😂 8.4K</div>
+        </article>
+
+        <article class="meme-card photoish">
+          <div class="fake-person">😐</div>
+          <div class="meme-big">WHEN MOM SAYS<br>“GUESTS AA RAHE HAIN”</div>
+          <div class="reaction">💀 7.9K</div>
+        </article>
+
+        <article class="meme-card yellow tilt-b">
+          <span class="meme-tag dark">BREAKING NEWS</span>
+          <div class="meme-big darktext">LOCAL LEGEND<br>FOUND DOING<br>ABSOLUTELY NOTHING</div>
+          <div class="reaction">😂 6.8K</div>
+        </article>
+
+        <article class="meme-card dark-card">
+          <div class="quote-mark">“</div>
+          <div class="meme-big">BRO SAID<br>“5 MINUTES”</div>
+          <div class="meme-small">3 hours later...</div>
+          <div class="reaction">💀 6.1K</div>
+        </article>
+
+        <article class="meme-card grid-card">
+          <div class="fake-person">🗿</div>
+          <div class="meme-big">CONFIDENCE<br>100%</div>
+          <div class="meme-small">SKILL LOADING...</div>
+          <div class="reaction">🔥 5.7K</div>
+        </article>
+
+        <article class="meme-card red-card tilt-a">
+          <span class="meme-tag">FRIEND GROUP</span>
+          <div class="meme-big">“BHAI MAIN AA RAHA HU”</div>
+          <div class="meme-small">location: still at home</div>
+          <div class="reaction">😂 5.2K</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="leaderboard section" id="leaderboard">
+      <div class="leader-title">
+        <span class="kicker">03 / LEADERBOARD</span>
+        <h2>WHO GOT ROASTED <em>THE HARDEST?</em></h2>
+        <p>Public reactions decide the ranking.</p>
+      </div>
+
+      <div class="leader-list">
+        <div class="leader-row champion">
+          <span class="rank">01</span>
+          <div class="avatar">🗿</div>
+          <div class="leader-info"><b>@rahul.exe</b><span>“Bhai ne confidence ko career bana liya.”</span></div>
+          <strong>14.2K 😂</strong>
+        </div>
+        <div class="leader-row">
+          <span class="rank">02</span>
+          <div class="avatar">😎</div>
+          <div class="leader-info"><b>@aman404</b><span>“Hero entry, zero preparation.”</span></div>
+          <strong>11.8K 😂</strong>
+        </div>
+        <div class="leader-row">
+          <span class="rank">03</span>
+          <div class="avatar">🤡</div>
+          <div class="leader-info"><b>@rohit.exe</b><span>“Mummy ne bula liya. Career khatam.”</span></div>
+          <strong>9.6K 😂</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section section" id="video">
+      <div class="video-heading">
+        <span class="kicker">04 / ROASTED ORIGINAL</span>
+        <h2>Kapish Kumar presents.</h2>
+        <p>Tumhari uploaded 15-second comedy video — directly on the front page.</p>
+      </div>
+
+      <div class="video-frame">
+        <video controls playsinline preload="metadata">
+          <source src="assets/roasted-original.mp4" type="video/mp4" />
+          Your browser does not support video.
+        </video>
+        <div class="video-credit">PRESENTED BY <b>KAPISH KUMAR</b></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand">ROASTED<span>💀</span></div>
+    <p>Upload. Roast. Laugh. Repeat.</p>
+    <span>© 2026 ROASTED</span>
+  </footer>
+
+  <div class="modal hidden" id="cameraModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeCamera">×</button>
+      <span class="kicker">CAMERA MODE</span>
+      <h2>CHEESE, BUT MAKE IT ROASTED.</h2>
+      <video id="cameraVideo" autoplay playsinline></video>
+      <canvas id="cameraCanvas" hidden></canvas>
+      <button class="primary" id="captureBtn">📸 Capture & Roast</button>
+      <p id="cameraStatus"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
